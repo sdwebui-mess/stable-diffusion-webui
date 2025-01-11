@@ -18,6 +18,9 @@ numpy
 omegaconf
 open-clip-torch
 
+diffusers==0.21.4
+huggingface-hub==0.16.4
+
 piexif
 protobuf==3.20.0
 psutil

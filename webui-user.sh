@@ -27,6 +27,10 @@ export PYTORCH_ROCM_ARCH=gfx1102
 export PYTORCH_HIP_ALLOC_CONF=garbage_collection_threshold:0.6,max_split_size_mb:128
 export COMMANDLINE_ARGS="--skip-torch-cuda-test --enable-insecure-extension-access --disable-opt-split-attention --no-half --precision full" # --medvram --medvram-sdxl
 
+# In case of problem with bitsandbytes with ROCm:
+# pip uninstall bitsandbytes
+# PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32 BNB_CUDA_VERSION=117 pip install bitsandbytes
+
 # git executable
 #export GIT="git"
 
