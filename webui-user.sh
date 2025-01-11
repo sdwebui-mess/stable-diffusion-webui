@@ -13,7 +13,19 @@
 #export COMMANDLINE_ARGS=""
 
 # python3 executable
-#python_cmd="python3"
+python_cmd="python3.11"
+
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
+export PYTORCH_ROCM_ARCH=gfx1102
+#export HSA_OVERRIDE_GFX_VERSION=11.0.0
+#export CUDA_VISIBLE_DEVICES=0
+#export HIP_VISIBLE_DEVICES=1
+
+#export HSA_OVERRIDE_GFX_VERSION=10.3.0
+#export PYTORCH_ROCM_ARCH=gfx1100 #useless
+
+export PYTORCH_HIP_ALLOC_CONF=garbage_collection_threshold:0.6,max_split_size_mb:128
+export COMMANDLINE_ARGS="--skip-torch-cuda-test --enable-insecure-extension-access --disable-opt-split-attention --no-half --precision full" # --medvram --medvram-sdxl
 
 # git executable
 #export GIT="git"
@@ -26,6 +38,7 @@
 
 # install command for torch
 #export TORCH_COMMAND="pip install torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113"
+export TORCH_COMMAND="pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.3"
 
 # Requirements file to use for stable-diffusion-webui
 #export REQS_FILE="requirements_versions.txt"
