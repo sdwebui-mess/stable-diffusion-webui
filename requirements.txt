@@ -9,6 +9,7 @@ einops
 facexlib
 git+https://github.com/sdwebui-mess/fastapi-94.git
 gradio==3.41.2
+wandb==0.15.12
 inflection
 jsonmerge
 kornia
@@ -32,3 +33,4 @@ torchdiffeq
 torchsde
 transformers==4.30.2
 pillow-avif-plugin==1.4.3
+triton
