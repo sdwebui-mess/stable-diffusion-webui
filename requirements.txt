@@ -7,7 +7,7 @@ clean-fid
 diskcache
 einops
 facexlib
-fastapi>=0.90.1
+git+https://github.com/sdwebui-mess/fastapi-94.git
 gradio==3.41.2
 inflection
 jsonmerge
